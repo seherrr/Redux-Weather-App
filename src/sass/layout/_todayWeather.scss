@@ -1,0 +1,328 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.todayWeather {
+    @include flexbox($direction: row, $justify: space-around);
+    margin-top: 10px;
+    gap: 30px;
+
+    &__weather {
+        @include flexbox($direction: column);
+        gap: 0px;
+
+        &__icon {
+            width: 90px;
+            height: 90px;
+        }
+
+        &__iconName {
+            text-transform: capitalize;
+            font-weight: $font-lighter;
+            font-size: $normal-font-size;
+        }
+    }
+
+    &__temperature {
+        @include flexbox($direction: column);
+
+        &__information {
+            font-weight: $font-medium;
+            font-size: $mega-font-size;
+        }
+
+        &__max, &__min, &__seperator {
+            font-size: $normal-font-size;
+            font-weight: $font-extra-light;
+        }
+    }
+
+    &__status {
+        @include flexbox($direction: column);
+
+        &__wind {
+            font-weight: $font-extra-light;
+            font-size: $normal-font-size;
+        }  
+
+        &__precip {
+            font-weight: $font-extra-light;
+            font-size: $normal-font-size;
+        }
+
+        &__pressure {
+            font-weight: $font-extra-light;
+            font-size: $normal-font-size;
+        }
+    }
+
+    @media screen and (max-width: $smaller-screen) {        
+        &__weather {
+
+            &__icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $smaller-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $small-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $extra-smaller-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $smaller-font-size;
+            }  
+    
+            &__precip {
+                font-size: $smaller-font-size;
+            }
+    
+            &__pressure {
+                font-size: $smaller-font-size;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: $smaller-screen2) {        
+        &__weather {
+
+            &__icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $small-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $normal-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $smaller-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $smaller-font-size;
+            }  
+    
+            &__precip {
+                font-size: $smaller-font-size;
+            }
+    
+            &__pressure {
+                font-size: $smaller-font-size;
+            }
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {        
+        &__weather {
+
+            &__icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $normal-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $medium-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $small-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $small-font-size;
+            }  
+    
+            &__precip {
+                font-size: $small-font-size;
+            }
+    
+            &__pressure {
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {        
+        &__weather {
+
+            &__icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $medium-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $mediumer-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $normal-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $normal-font-size;
+            }  
+    
+            &__precip {
+                font-size: $normal-font-size;
+            }
+    
+            &__pressure {
+                font-size: $normal-font-size;
+            }
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {        
+        &__weather {
+
+            &__icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $medium-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $mediumer-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $normal-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $normal-font-size;
+            }  
+    
+            &__precip {
+                font-size: $normal-font-size;
+            }
+    
+            &__pressure {
+                font-size: $normal-font-size;
+            }
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {        
+        &__weather {
+
+            &__icon {
+                width: 90px;
+                height: 90px;
+            }
+
+            &__iconName {
+                font-weight: $font-lighter;
+                font-size: $big-font-size;
+            }
+        }
+
+        &__temperature {
+            @include flexbox($direction: column);
+
+            &__information {
+                font-weight: $font-medium;
+                font-size: $mega-font-size;
+            }
+
+            &__max, &__min, &__seperator {
+                font-size: $medium-font-size;
+                font-weight: $font-extra-light;
+            }
+        }
+
+        &__status {
+            @include flexbox($direction: column);
+    
+            &__wind {
+                font-size: $medium-font-size;
+            }  
+    
+            &__precip {
+                font-size: $medium-font-size;
+            }
+    
+            &__pressure {
+                font-size: $medium-font-size;
+            }
+        }
+    }
+}

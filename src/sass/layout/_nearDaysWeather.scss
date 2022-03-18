@@ -1,0 +1,231 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.nearDaysWeather {
+    @include flexbox($direction: row, $justify: space-between);
+    margin-top: 40px;
+    gap: 30px;
+
+    &__information {
+        @include flexbox($direction: column);
+        gap: 15px;
+
+        &__day {
+            font-weight: $font-semi-bold;
+            font-size: $normal-font-size;
+        }
+    
+        &__icon {
+            height: 80px;
+            width: 80px;
+        }
+    
+        &__temperature {
+            @include flexbox($direction: row);
+            gap: 3px;
+
+            &__morn, &__night, &__seperator {
+                font-weight: $font-light;
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            @include flexbox($direction: column);
+            margin-top: 10px;
+            gap: 0px;
+        }
+
+        &__information {
+            @include flexbox($direction: row);
+            gap: 5px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $small-font-size;
+            }
+        
+            &__icon {
+                height: 50px;
+                width: 50px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $smaller-font-size;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            @include flexbox($direction: column);
+            margin-top: 15px;
+            gap: 5px;
+        }
+
+        &__information {
+            @include flexbox($direction: row);
+            gap: 10px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $normal-font-size;
+            }
+        
+            &__icon {
+                height: 60px;
+                width: 60px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            @include flexbox($direction: row);
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        &__information {
+            @include flexbox($direction: column);
+            gap: 0px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $normal-font-size;
+            }
+        
+            &__icon {
+                height: 60px;
+                width: 60px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $medium-screen) {
+        & {
+            @include flexbox($direction: row);
+            margin-top: 20px;
+            gap: 40px;
+        }
+
+        &__information {
+            @include flexbox($direction: column);
+            gap: 0px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $normal-font-size;
+            }
+        
+            &__icon {
+                height: 70px;
+                width: 70px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $large-screen) {
+        & {
+            @include flexbox($direction: row);
+            margin-top: 25px;
+            gap: 60px;
+        }
+
+        &__information {
+            @include flexbox($direction: column);
+            gap: 0px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $medium-font-size;
+            }
+        
+            &__icon {
+                height: 80px;
+                width: 80px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $normal-font-size;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+        & {
+            @include flexbox($direction: row);
+            margin-top: 30px;
+            gap: 60px;
+        }
+
+        &__information {
+            @include flexbox($direction: column);
+            gap: 0px;
+
+            &__day {
+                font-weight: $font-semi-bold;
+                font-size: $mediumer-font-size;
+            }
+        
+            &__icon {
+                height: 90px;
+                width: 90px;
+            }
+        
+            &__temperature {
+                @include flexbox($direction: row);
+                gap: 3px;
+    
+                &__morn, &__night, &__seperator {
+                    font-weight: $font-light;
+                    font-size: $normal-font-size;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../Helpers/mixins';
+@import '../Helpers/variables';
+
+.weatherForecast {
+    width: auto;
+    height: auto;
+    border-radius: $radius;
+    border: 1px solid $white;
+    padding: 10px 50px 20px 50px;
+
+    @media screen and (max-width: $smaller-screen) {
+        & {
+            width: 130px;
+        }
+    }
+
+    @media screen and (min-width: $smaller-screen2) {
+        & {
+            width: 280px;
+        }
+    }
+
+    @media screen and (min-width: $small-screen) {
+        & {
+            width: auto;
+        }
+    }
+}
